@@ -10,6 +10,9 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="stylesheet"
+      href="./src/style.css"/>
     <style>
       .attribution {
         font-size: 11px;
@@ -23,11 +26,10 @@
   <body>
     <div class="container">
     <!-- Rating state start--> 
-    <div id="rating" class="card">
+    <div id="ratingcard" class="card">
       <div class="star">
-        <img src="./images/icon-star.svg" alt="Star illustration" />
+        <img height="18px" width="18px" src="./images/icon-star.svg" alt="Star illustration" />
       </div>
-
       <h3 class="card-title">How did we do?</h3>
       <p class="card-description">
         Please let us know how we did with your support request. All feedback is
@@ -35,44 +37,46 @@
       </p>
       <ol class="ratings-list">
         <li class="rating">
-          <label>
-            <input hidden type="radio" name="rating" value="1" />
+          <label for="rating1">
+            <input hidden type="radio" name="rating1" id="rating1" value="1" />
             1
           </label>
         </li>
         <li class="rating">
-          <label>
-            <input hidden type="radio" name="rating" value="2" />
+          <label for="rating2">
+            <input hidden type="radio" name="rating2" id="rating2" value="2" />
             2
           </label>
         </li>
         <li class="rating">
-          <label>
-            <input hidden type="radio" name="rating" value="3" />
+          <label  for="rating3">
+            <input hidden type="radio" name="rating3" id="rating3" value="3" />
             3
           </label>
         </li>
         <li class="rating">
-          <label>
-            <input hidden type="radio" name="rating" value="4" />
+          <label for="rating4">
+            <input hidden type="radio" name="rating4" id="rating4" value="4" />
             4
           </label>
         </li>
         <li class="rating">
-          <label>
-            <input hidden type="radio" name="rating" value="5" />
+          <label for="rating5">
+            <input hidden type="radio" name="rating5" id="rating5" value="5" />
             5
           </label>
         </li>
       </ol>
-      <button>Submit</button>
+      <button id="submit" class="">Submit</button>
     </div>
     
     <!-- Rating state end -->
 
     <!-- Thank you state start --> 
-    <div id="thankyou"  class="card">
+    <div id="thankyoucard"  class="hidden">
       <img
+        height="150px"
+        width="auto"
         src="./images/illustration-thank-you.svg"
         alt="Thank You illustration"
       />
