@@ -1,4 +1,5 @@
 @import "./reset.css";
+
 :root {
   /* PRIMARY COLOR */
   --orange: hsl(25, 97%, 53%);
@@ -6,7 +7,7 @@
   /* NEUTRAL COLORS */
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
-  --medium-grey: hsl(216, 12%, 54%);
+  --medium-grey: hsl(215, 6%, 36%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
 
@@ -39,4 +40,130 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.5rem;
+  width: min(375px, 35%);
+  min-width: min-content;
+  background-color: var(--dark-blue);
+  border-radius: 0.5rem;
+}
+
+.star {
+  height: 2.5rem;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--medium-grey);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  font-size: var(--font-size-xlarge);
+  font-weight: var(--weight-bold);
+  color: var(--white);
+  text-align: center;
+}
+
+p.card-description {
+  font-size: var(--font-size-medium);
+  color: var(--light-grey);
+  font-weight: var(--weight-regular);
+}
+
+ol.ratings-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+li.rating {
+  background-color: var(--medium-grey);
+  height: 2.5rem;
+  width: 2.5rem;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  border-radius: 100%;
+}
+
+li.rating>* {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: var(--light-grey);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: var(--font-size-medium);
+  font-weight: var(--weight-bold);
+  padding: 0.5rem 1rem;
+  border-radius: 10rem;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    background-color: lightgreen;
+  }
+}
+
+
+/* THANK YOU CARD */
+#thankyou.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#thankyou.card > p.card-description {
+  text-align: center;
+}
+#thankyou.card >.card-summary {
+  background-color: var(--medium-grey);
+  border-radius: 10rem;
+  padding: 0 1rem;
+  justify-self: center;
+  align-self: center;
+  color: var(--orange);
+}
+#thankyou.card > img {
+  height: 6rem;
+  width: auto;
+  margin-bottom: 1rem;
 }
