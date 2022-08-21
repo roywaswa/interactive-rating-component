@@ -1,4 +1,4 @@
 console.log("Hello World!");
-export { };
+export {};
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
