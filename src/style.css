@@ -124,7 +124,7 @@ li.rating.active > * {
   color: var(--white);
 }
 
-li.rating>* {
+li.rating > * {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -134,7 +134,6 @@ li.rating>* {
   width: 100%;
   color: var(--light-grey);
 }
-
 
 button {
   cursor: pointer;
@@ -163,9 +162,8 @@ button:hover {
   }
 }
 
-
 /* THANK YOU CARD */
-#thankyoucard.card{
+#thankyoucard.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,7 +174,7 @@ button:hover {
 #thankyoucard.card > p.card-description {
   text-align: center;
 }
-#thankyoucard.card >.card-summary {
+#thankyoucard.card > .card-summary {
   background-color: var(--medium-grey);
   border-radius: 10rem;
   padding: 0 1rem;
@@ -190,8 +188,6 @@ button:hover {
   width: auto;
   margin-bottom: 1rem;
 }
-
-
 
 .hidden {
   display: none;
